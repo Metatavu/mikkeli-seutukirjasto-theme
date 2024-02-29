@@ -5,7 +5,7 @@ Description: Wordpress theme for Mikkelin seutukirjasto
 Author: Metatavu Oy
 Author URI: http://metatavu.fi
 Template: twentytwentyfour
-Version: 0.0.2
+Version: 0.0.4
 */
 
 body {
@@ -51,9 +51,7 @@ a {
 }
 
 ul {
-  row-gap: 0.75rem;
-  display: flex;
-  flex-direction: column;
+  line-height: 2rem;
 }
 
 li::marker {
@@ -64,6 +62,7 @@ li::marker {
   font-size: 1.25rem;
   text-underline-offset: 0.5rem;
   text-wrap: balance;
+  line-height: 2.25rem;
 }
 
 .wp-block-navigation-item__content {
@@ -82,7 +81,7 @@ li::marker {
 }
 
 body.admin-bar .sticky-header {
-  top: 32px; /* Adjust based on the admin bar height */
+  top: 32px;
 }
 
 .sub-title-text {
@@ -122,7 +121,6 @@ body.admin-bar .sticky-header {
   height: auto;
 }
 
-/* Default styling for search input, applicable when not on the search results page */
 .wp-block-search__input {
   padding: 16px;
   font-family: Titillium Web, sans-serif;
@@ -146,7 +144,7 @@ body.admin-bar .sticky-header {
 }
 
 .a-to-o-listing {
-  column-count: 3; /* Adjust the number of columns as needed */
+  column-count: 3;
   column-gap: 4rem; 
 }
 
@@ -166,7 +164,7 @@ body.admin-bar .sticky-header {
   padding: 0.5rem;
   border-radius: 100rem;
   text-align: center;
-  margin: 0 20px; /* Adjust the margin to control space around the label */
+  margin: 0 20px;
 }
 
 .a-to-o-header::before,
@@ -174,10 +172,9 @@ body.admin-bar .sticky-header {
   content: '';
   flex-grow: 1;
   border-bottom: 1px solid #224C8E;
-  margin: 0 10px; /* Adjust margin to control the space between lines and label */
+  margin: 0 10px;
 }
 
-/*rss feed block on a four columns grid layout. */
 .three-column-grid-container {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr);
@@ -242,7 +239,7 @@ body.admin-bar .sticky-header {
     padding-top: 0rem !important;
   }
   body.admin-bar .sticky-header {
-    top: 46px; /* Admin bar height is larger on smaller screens */
+    top: 46px;
   }
   .tnp-subscription-minimal {
     flex-direction: column;
@@ -253,16 +250,16 @@ body.admin-bar .sticky-header {
     }
   }
   .a-to-o-listing {
-    column-count: 1; /* Back to single column for mobile */
+    column-count: 1;
   }
   .wp-block-feed-block-feed-item-template {
-    grid-template-columns: 1fr; /* Back to single column for mobile */
+    grid-template-columns: 1fr;
   }
   .three-column-grid-container {
-    grid-template-columns: 1fr; /* Back to single column for mobile */
+    grid-template-columns: 1fr;
   }
   .wp-block-feed-block-feed-item {
-    flex-direction: row; /* Back to single column for mobile */
+    flex-direction: row;
   }
   .rss-feed-image {
     flex: 1;
