@@ -1,0 +1,293 @@
+/*
+Theme Name: Mikkeli seutukirjasto theme
+Theme URI: https://mikkelinseustg.wpenginepowered.com/
+Description: Wordpress theme for Mikkelin seutukirjasto
+Author: Metatavu Oy
+Author URI: http://metatavu.fi
+Template: twentytwentyfour
+Version: 0.0.4
+*/
+
+body {
+  font-family: Titillium Web, sans-serif;
+  background-color: #fff;
+}
+
+.wp-block-group {
+  margin-block-start: 0
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  font-family: Titillium Web, sans-serif;
+  text-wrap: balance;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: Titillium Web, sans-serif;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.25rem;
+  font-family: Titillium Web, sans-serif;
+  text-wrap: balance;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1.15rem;
+  font-family: Titillium Web, sans-serif;
+  text-wrap: balance;
+}
+
+a {
+  color: #224C8E;
+}
+
+ul {
+  line-height: 2rem;
+}
+
+li::marker {
+  color: #224C8E;
+}
+
+.big-link {
+  font-size: 1.25rem;
+  text-underline-offset: 0.5rem;
+  text-wrap: balance;
+  line-height: 2.25rem;
+}
+
+.wp-block-navigation-item__content {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: initial;
+}
+
+.sticky-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin: 0 auto;
+  box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+body.admin-bar .sticky-header {
+  top: 32px;
+}
+
+.sub-title-text {
+  text-underline-offset: 0.75rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.25rem !important;
+  text-decoration-color: #62BAE9 !important;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.article-date {
+  position: absolute;
+}
+
+.wp-block-search .wp-element-button, .wp-block-search .wp-block-button__link {
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.wp-block-search__button svg {
+  fill: #224C8E;
+}
+
+.wp-block-search__inside-wrapper {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.wp-block-search .wp-block-search__input {
+  background-color: transparent;
+  padding-left: 0.5rem;
+}
+
+.wp-block-site-logo img {
+  max-width: none;
+  height: auto;
+}
+
+.wp-block-search__input {
+  padding: 16px;
+  font-family: Titillium Web, sans-serif;
+}
+
+.page-content {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4rem !important;
+  padding-bottom: 2rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.tnp-subscription-minimal{
+  display: flex;
+  input.tnp-email {
+    max-width: none !important;
+  }
+}
+
+.a-to-o-listing {
+  column-count: 3;
+  column-gap: 4rem; 
+}
+
+.a-to-o-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.a-to-o-label {
+  display: block;
+  border: 1px solid #224C8E;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 100rem;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.a-to-o-header::before,
+.a-to-o-header::after {
+  content: '';
+  flex-grow: 1;
+  border-bottom: 1px solid #224C8E;
+  margin: 0 10px;
+}
+
+.three-column-grid-container {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.grid-item-image {
+  flex: 1;
+  object-fit: cover;
+}
+
+.grid-item-content {
+  flex: 4;
+}
+
+/*rss feed block on a four columns grid layout. */
+.wp-block-feed-block-feed-item-template {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/*rss feed item on a four columns grid layout. */
+.wp-block-feed-block-feed-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #F8F8F8;
+}
+
+.rss-feed-icon {
+  line-height: 14px;
+}
+
+.rss-feed-title {
+  flex: 1;
+}
+
+.rss-feed-content {
+  flex: 1;
+}
+
+.header-logo-and-navigation {
+  flex: 1;
+}
+
+/* Mobile adjustments*/
+@media (max-width: 1140px) {
+  .cover-front-page {
+    max-height: 25vh !important;
+  }
+  .divider {
+    display: block;
+  }
+  .divider-desktop {
+    display: none;
+  }
+  .columns-opening-hours {
+    row-gap: 4rem;
+  }
+  .page-content {
+    margin: 1rem !important;
+    padding-top: 0rem !important;
+  }
+  body.admin-bar .sticky-header {
+    top: 46px;
+  }
+  .tnp-subscription-minimal {
+    flex-direction: column;
+    input.tnp-email {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin-bottom: 1rem;
+    }
+  }
+  .a-to-o-listing {
+    column-count: 1;
+  }
+  .wp-block-feed-block-feed-item-template {
+    grid-template-columns: 1fr;
+  }
+  .three-column-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .wp-block-feed-block-feed-item {
+    flex-direction: row;
+  }
+  .rss-feed-image {
+    flex: 1;
+    width: unset;
+    height: 160px !important;
+  }
+  .rss-feed-content {
+    flex: 1;
+  }
+  .header-logo-and-navigation {
+    justify-content: space-between !important;
+  }
+}
+
+@media ( min-width: 1140px ) {
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: none !important;
+  }
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: block !important;
+  }
+}
+
+@media ( min-width: 600px ) {
+  .wp-block-navigation__responsive-container-open:not(.always-shown) {
+    display: flex;
+  }
+  .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+    display: none;
+  }
+}
